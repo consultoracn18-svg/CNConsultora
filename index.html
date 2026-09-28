@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -71,6 +70,9 @@
   .stagger-4{transition-delay:.3s;}
   .stagger-5{transition-delay:.38s;}
   .stagger-6{transition-delay:.46s;}
+  .stagger-7{transition-delay:.54s;}
+  .stagger-8{transition-delay:.62s;}
+  .stagger-9{transition-delay:.7s;}
 
   .dot-trio{display:inline-flex; gap:4px; align-items:flex-end;}
   .dot-trio span{border-radius:50%; background:var(--blue-700); display:block;}
@@ -166,8 +168,7 @@
   .tag.tag-b{background:var(--blush-500);}
   .service-group-head h3{font-family:'Fraunces',serif; font-size:1.35rem; color:var(--navy-950); font-weight:500;}
 
-  .services-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:22px;}
-  .services-grid.grp-a{grid-template-columns:repeat(3, 1fr);}
+  .services-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;}
   .service-card{
     background:var(--white);
     border:1px solid var(--line);
@@ -175,6 +176,8 @@
     padding:28px 26px;
     transition:transform .3s cubic-bezier(.2,.7,.3,1), box-shadow .3s ease, border-color .3s ease;
     border-top:3px solid transparent;
+    text-decoration:none;
+    display:block;
   }
   .service-card:hover{transform:translateY(-5px); box-shadow:0 22px 40px -24px rgba(11,46,79,0.35);}
   .services-grid.grp-a .service-card{border-top-color:var(--navy-900);}
@@ -190,6 +193,9 @@
   .services-grid.grp-b .service-icon{background:linear-gradient(135deg, var(--blush-500), var(--blush-600));}
   .service-card h4{font-family:'Fraunces',serif; font-weight:600; font-size:1.1rem; color:var(--navy-950); margin-bottom:9px; line-height:1.25;}
   .service-card p{font-size:0.9rem; color:var(--charcoal-600); line-height:1.55;}
+  .service-card .pdf-link{display:inline-flex; align-items:center; gap:6px; margin-top:16px; font-size:0.78rem; font-weight:700;}
+  .services-grid.grp-a .pdf-link{color:var(--blue-700);}
+  .services-grid.grp-b .pdf-link{color:var(--blush-600);}
 
   /* ---------- PROCESS: contrasted row ---------- */
   .process{background:var(--navy-950); color:var(--white); position:relative; overflow:hidden;}
@@ -359,6 +365,9 @@
   .footer-bottom{padding-top:24px; display:flex; justify-content:space-between; font-size:0.8rem; color:rgba(255,255,255,0.48); flex-wrap:wrap; gap:10px;}
 
   /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 1100px){
+    .services-grid{grid-template-columns:repeat(2, 1fr);}
+  }
   @media (max-width: 900px){
     .navlinks{display:none;}
     .hero-signature{width:420px; height:420px; top:-6%; right:-18%;}
@@ -450,36 +459,57 @@
           <h3>Números en regla</h3>
         </div>
         <div class="services-grid grp-a">
-          <div class="service-card reveal stagger-1">
+          <a class="service-card reveal stagger-1" href="https://jekuqbqnbfnauoplozae.supabase.co/storage/v1/object/public/documentos/1790622409950-cn_01_monotributo_convenio_multilateral_iibb.pdf" target="_blank" rel="noopener">
             <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
-            <h4>Monotributo</h4>
-            <p>Inscripción, categorización y seguimiento mensual para que nunca te agarre desprevenido.</p>
-          </div>
-          <div class="service-card reveal stagger-2">
+            <h4>Monotributo — Convenio Multilateral IIBB</h4>
+            <p>Inscripción y gestión de Ingresos Brutos bajo el régimen de Convenio Multilateral.</p>
+            <span class="pdf-link">Ver PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </a>
+          <a class="service-card reveal stagger-2" href="https://jekuqbqnbfnauoplozae.supabase.co/storage/v1/object/public/documentos/1790622411177-cn_02_monotributo_iibb_local.pdf" target="_blank" rel="noopener">
+            <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+            <h4>Monotributo — IIBB Local</h4>
+            <p>Inscripción y gestión de Ingresos Brutos en jurisdicción local.</p>
+            <span class="pdf-link">Ver PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </a>
+          <a class="service-card reveal stagger-3" href="https://jekuqbqnbfnauoplozae.supabase.co/storage/v1/object/public/documentos/1790622412617-cn_03_monotributo_iibb_regimen_simplificado.pdf" target="_blank" rel="noopener">
+            <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+            <h4>Monotributo — Régimen Simplificado</h4>
+            <p>Categorización y seguimiento bajo el régimen simplificado de Ingresos Brutos.</p>
+            <span class="pdf-link">Ver PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </a>
+          <a class="service-card reveal stagger-4" href="https://jekuqbqnbfnauoplozae.supabase.co/storage/v1/object/public/documentos/1790622414263-cn_04_responsables_inscriptos.pdf" target="_blank" rel="noopener">
             <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div>
-            <h4>Responsable Inscripto</h4>
+            <h4>Responsables Inscriptos</h4>
             <p>Gestión impositiva integral para empresas y profesionales bajo este régimen.</p>
-          </div>
-          <div class="service-card reveal stagger-3">
+            <span class="pdf-link">Ver PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </a>
+          <a class="service-card reveal stagger-5" href="https://jekuqbqnbfnauoplozae.supabase.co/storage/v1/object/public/documentos/1790622415574-cn_05_sociedades.pdf" target="_blank" rel="noopener">
+            <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 21v-4h6v4M9 8h1M9 12h1M14 8h1M14 12h1"/></svg></div>
+            <h4>Sociedades</h4>
+            <p>Constitución y gestión contable-impositiva de sociedades.</p>
+            <span class="pdf-link">Ver PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </a>
+          <div class="service-card reveal stagger-6">
             <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 19V5a2 2 0 012-2h8l6 6v10a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M14 3v6h6"/></svg></div>
             <h4>Auditoría de estados contables</h4>
             <p>Revisión rigurosa de tus balances, con foco en confiabilidad y cumplimiento.</p>
           </div>
-          <div class="service-card reveal stagger-4">
+          <div class="service-card reveal stagger-7">
             <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 22l5-3 5 3-1.5-9.5"/></svg></div>
             <h4>Certificación de ingresos</h4>
             <p>Constancias y certificaciones para trámites personales o bancarios.</p>
           </div>
-          <div class="service-card reveal stagger-5">
+          <div class="service-card reveal stagger-8">
             <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0114 0v1"/></svg></div>
             <h4>Liquidación de sueldos</h4>
             <p>Cálculo y liquidación mensual de haberes para tu equipo, sin errores ni demoras.</p>
           </div>
-          <div class="service-card reveal stagger-6">
+          <a class="service-card reveal stagger-9" href="https://jekuqbqnbfnauoplozae.supabase.co/storage/v1/object/public/documentos/1790627935880-cn_11_casas_particulares.pdf" target="_blank" rel="noopener">
             <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><path d="M9 21V12h6v9"/></svg></div>
             <h4>Personal de casas particulares</h4>
             <p>Liquidación y trámites para el empleo doméstico, resuelto de punta a punta.</p>
-          </div>
+            <span class="pdf-link">Ver PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </a>
         </div>
       </div>
 
@@ -489,12 +519,37 @@
           <h3>Estrategia y herramientas</h3>
         </div>
         <div class="services-grid grp-b">
-          <div class="service-card reveal stagger-1">
+          <a class="service-card reveal stagger-1" href="https://jekuqbqnbfnauoplozae.supabase.co/storage/v1/object/public/documentos/1790622416806-cn_06_plan_de_negocios.pdf" target="_blank" rel="noopener">
             <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
-            <h4>Asesoramiento estratégico</h4>
-            <p>Plan de negocios, informes de gestión, reducción de costos y RR.HH., entre otros servicios.</p>
-          </div>
-          <div class="service-card reveal stagger-2">
+            <h4>Plan de Negocios</h4>
+            <p>Armamos el plan de negocios que ordena objetivos, números y próximos pasos.</p>
+            <span class="pdf-link">Ver PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </a>
+          <a class="service-card reveal stagger-2" href="https://jekuqbqnbfnauoplozae.supabase.co/storage/v1/object/public/documentos/1790622418041-cn_07_organizacion_integral.pdf" target="_blank" rel="noopener">
+            <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <h4>Organización Integral</h4>
+            <p>Estructurás y organizás cada área de tu negocio de forma integral.</p>
+            <span class="pdf-link">Ver PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </a>
+          <a class="service-card reveal stagger-3" href="https://jekuqbqnbfnauoplozae.supabase.co/storage/v1/object/public/documentos/1790622419375-cn_08_informes_de_gestion_proyecciones.pdf" target="_blank" rel="noopener">
+            <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/><path d="M3 15l5-5 4 4 8-8"/></svg></div>
+            <h4>Informes de Gestión y Proyecciones</h4>
+            <p>Informes de gestión y proyecciones económico-financieras para decidir con datos.</p>
+            <span class="pdf-link">Ver PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </a>
+          <a class="service-card reveal stagger-4" href="https://jekuqbqnbfnauoplozae.supabase.co/storage/v1/object/public/documentos/1790622420695-cn_09_reingenieria_de_procesos_reduccion_de_costos.pdf" target="_blank" rel="noopener">
+            <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 3v6h-6"/></svg></div>
+            <h4>Reingeniería de Procesos y Reducción de Costos</h4>
+            <p>Rediseñamos procesos para ganar eficiencia y reducir costos.</p>
+            <span class="pdf-link">Ver PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </a>
+          <a class="service-card reveal stagger-5" href="https://jekuqbqnbfnauoplozae.supabase.co/storage/v1/object/public/documentos/1790622421925-cn_10_planes_de_induccion_manuales_capacitacion.pdf" target="_blank" rel="noopener">
+            <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 5h6a2 2 0 012 2v13a2 2 0 00-2-2H4z"/><path d="M20 5h-6a2 2 0 00-2 2v13a2 2 0 012-2h6z"/></svg></div>
+            <h4>Planes de Inducción, Manuales y Capacitación</h4>
+            <p>Manuales, planes de inducción y capacitación para tu equipo.</p>
+            <span class="pdf-link">Ver PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
+          </a>
+          <div class="service-card reveal stagger-6">
             <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
             <h4>Herramientas de gestión web</h4>
             <p>Desarrollamos soluciones digitales a medida para que PyMEs y emprendedores gestionen mejor su negocio.</p>
@@ -622,13 +677,20 @@
       <div class="field">
         <label for="servicio">¿En qué te podemos ayudar?</label>
         <select id="servicio">
-          <option>Monotributo</option>
-          <option>Responsable Inscripto</option>
+          <option>Monotributo — Convenio Multilateral IIBB</option>
+          <option>Monotributo — IIBB Local</option>
+          <option>Monotributo — Régimen Simplificado</option>
+          <option>Responsables Inscriptos</option>
+          <option>Sociedades</option>
           <option>Auditoría de estados contables</option>
           <option>Certificación de ingresos</option>
           <option>Liquidación de sueldos</option>
           <option>Personal de casas particulares</option>
-          <option>Asesoramiento estratégico</option>
+          <option>Plan de Negocios</option>
+          <option>Organización Integral</option>
+          <option>Informes de Gestión y Proyecciones</option>
+          <option>Reingeniería de Procesos y Reducción de Costos</option>
+          <option>Planes de Inducción, Manuales y Capacitación</option>
           <option>Herramientas de gestión web</option>
           <option>Otra consulta</option>
         </select>
