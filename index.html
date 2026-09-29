@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -224,7 +223,6 @@
   .step-card:hover{transform:translateY(-5px);}
   .step-card:nth-child(1){background:linear-gradient(160deg, var(--blue-700), var(--navy-900));}
   .step-card:nth-child(2){background:linear-gradient(160deg, var(--blue-700), var(--navy-900)); border-left:3px solid var(--blush-500);}
-  .step-card:nth-child(2) .step-progress span.filled{background:var(--blush-400);}
   .step-card:nth-child(2) .label{color:var(--blush-300);}
   .step-card:nth-child(3){background:linear-gradient(160deg, var(--navy-900), var(--navy-950)); border:1px solid rgba(79,179,232,0.35);}
   .step-progress{display:flex; gap:6px; margin-bottom:30px;}
@@ -385,6 +383,23 @@
     .section{padding:72px 0;}
     .wrap{padding:0 20px;}
   }
+  .whatsapp-float{
+    position:fixed;
+    right:22px; bottom:22px;
+    width:58px; height:58px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 14px 30px -10px rgba(0,0,0,0.45);
+    z-index:60;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .whatsapp-float:hover{transform:translateY(-3px) scale(1.05); box-shadow:0 18px 36px -10px rgba(0,0,0,0.5);}
+  .whatsapp-float svg{width:30px; height:30px;}
+  @media (max-width:900px){
+    .whatsapp-float{right:16px; bottom:16px; width:52px; height:52px;}
+    .whatsapp-float svg{width:26px; height:26px;}
+  }
 </style>
 </head>
 <body>
@@ -427,7 +442,7 @@
       <span class="mono">Contable · Impositivo · Estratégico</span>
     </div>
     <h1>Cuidamos tus números para impulsar tu <em>crecimiento</em>.</h1>
-    <p class="lead">Acompañamos a personas, emprendedores y PyMEs en cada número que importa: impuestos, sueldos, balances y la estrategia para crecer con orden.</p>
+    <p class="lead">Acompañamos a personas y negocios — desde tus primeros pasos como emprendedor hasta la gestión de una PyME — con impuestos, sueldos, balances y la estrategia para crecer con orden.</p>
     <div class="hero-ctas">
       <a href="#contacto" class="btn btn-primary">Agendar una consulta</a>
       <a href="#servicios" class="btn btn-outline-white">Ver servicios</a>
@@ -725,6 +740,10 @@
     </div>
   </div>
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/5491126016873" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="white"><path d="M16.004 3C9.376 3 4 8.373 4 15c0 2.385.702 4.607 1.909 6.472L4 29l7.72-1.862A11.94 11.94 0 0 0 16.004 27C22.632 27 28 21.627 28 15S22.632 3 16.004 3zm0 21.818c-1.94 0-3.744-.57-5.27-1.55l-.378-.24-4.58 1.104 1.127-4.47-.246-.393A9.77 9.77 0 0 1 5.2 15c0-5.94 4.86-10.8 10.804-10.8S26.8 9.06 26.8 15 21.948 24.818 16.004 24.818zm5.63-7.75c-.31-.156-1.83-.902-2.114-1.005-.283-.104-.49-.156-.696.156-.207.31-.8 1.005-.98 1.212-.18.207-.362.233-.672.078-.31-.156-1.31-.482-2.494-1.535-.922-.822-1.544-1.837-1.725-2.148-.18-.31-.02-.478.137-.633.14-.14.31-.362.465-.543.155-.18.207-.31.31-.517.104-.207.052-.388-.026-.543-.078-.156-.696-1.677-.955-2.297-.252-.605-.508-.523-.696-.533l-.593-.01c-.207 0-.543.078-.827.388-.283.31-1.083 1.06-1.083 2.583s1.11 2.996 1.264 3.203c.155.207 2.183 3.333 5.29 4.673.74.32 1.317.51 1.767.653.742.236 1.418.203 1.953.123.596-.089 1.83-.748 2.088-1.47.258-.72.258-1.337.18-1.47-.078-.13-.283-.207-.593-.362z"/></svg>
+</a>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
